@@ -1,26 +1,7 @@
-# vue-intersect
+# Vue Intersect
 
-## Project setup
-```
-yarn install
-```
+A Vue directive based on the Interaction Observer API.
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+---
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+## Docs Coming Soon

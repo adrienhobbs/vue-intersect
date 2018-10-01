@@ -1,5 +1,5 @@
 {
-  "name": "vue-intersect",
+  "name": "vue-intersection",
   "version": "0.1.0",
   "private": false,
   "scripts": {
@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "deploy-page": "gh-pages -d dist",
     "build-deploy": "yarn build && yarn deploy-page",
-    "build-lib": "vue-cli-service build --target lib --name vue-on-visible src/lib/index.js"
+    "build-lib": "vue-cli-service build --target lib --name vue-intersection src/lib/index.js"
   },
   "dependencies": {
     "vue": "^2.5.17"
@@ -52,7 +52,7 @@
     "not ie <= 8"
   ],
   "description": "Intersection Observer for Vue JS",
-  "main": "dist/vue-intersect.common.js",
+  "main": "dist/vue-intersection.common.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adrienhobbs/vue-intersect.git"

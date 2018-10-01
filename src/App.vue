@@ -3,28 +3,7 @@
     <div class="boxes">
       <div v-for="(color, i) in colors"
            :key="i">
-        <VueIntersect topOffset="-20%"
-                      bottomOffset="-20%"
-                      :repeat="true">
-          <div class="box"
-               :style="{backgroundColor: '#e6e6e6'}"
-               slot-scope="{vueIntersect}">
-            <div class="top-info">
-              <div v-for="(value, key) in vueIntersect"
-                   :key="key">
-                <h4>{{key}}</h4>: <h5>{{value}}</h5>
-              </div>
-            </div>
-            <div class="bottom-info">
-              <div v-for="(value, key) in vueIntersect"
-                   :key="key">
-                <div>
-                  <h4>{{key}}</h4>: <h5>{{value}}</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </VueIntersect>
+        <MyComponent />
       </div>
     </div>
     <div class="trigger top"></div>
@@ -34,8 +13,11 @@
 
 <script>
 
+import MyComponent from './examples/MyComponent'
+
 export default {
   name: 'app',
+  components: {MyComponent},
   data() {
     return {
       numItems: 10
@@ -76,37 +58,5 @@ h5 {
   justify-self: center;
   grid-gap: 40px;
   margin: auto;
-}
-
-.box {
-  height: 59vh;
-  width: 100%;
-  position: relative;
-  padding: 30px;
-}
-
-.top-info {
-  width: 100%;
-  position: absolute;
-  top: 30px;
-}
-
-.bottom-info {
-  width: 100%;
-  position: absolute;
-  bottom: 30px;
-}
-
-.trigger {
-  position: fixed;
-  width: 100%;
-  background: white;
-  height: 3px;
-}
-.trigger.top {
-  top: 20%;
-}
-.trigger.bottom {
-  bottom: 20%;
 }
 </style>

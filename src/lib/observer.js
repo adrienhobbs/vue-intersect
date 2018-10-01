@@ -38,7 +38,7 @@ const Observer = (function() {
     threshold = 100,
     topOffset = '0%',
     bottomOffset = '0%',
-    repeat = false,
+    once = true,
     vnode
   }) => {
     const newItem = Object.create(ObserverItem)
@@ -49,8 +49,8 @@ const Observer = (function() {
       Observers[rootMargin] || createObserver(rootMargin, threshold)
     Observers[rootMargin].observe(elm)
 
+    newItem.once = once
     newItem.elm = elm
-    newItem.repeat = repeat
     newItem.observer = Observers[rootMargin]
     newItem.vnode = vnode
 

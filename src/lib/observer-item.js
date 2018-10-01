@@ -49,7 +49,7 @@ export default {
     this.entry = entry
     this.copyPropsToVnode()
 
-    if (entry.intersectionRatio > 0 && !this.repeat) {
+    if (entry.intersectionRatio > 0 && this.once) {
       this.observer.unobserve(this.elm)
     }
   }

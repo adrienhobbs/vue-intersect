@@ -1,19 +1,5 @@
 const VueIntersectMixin = {
   name: 'VueIntersectMixin',
-  props: {
-    topOffset: {
-      type: String,
-      default: '0%'
-    },
-    bottomOffset: {
-      type: String,
-      default: '0%'
-    },
-    repeat: {
-      type: Boolean,
-      default: true
-    }
-  },
   data() {
     return {
       isIntersecting: null,
@@ -21,8 +7,7 @@ const VueIntersectMixin = {
       isAbove: null,
       isBelow: null,
       isPartiallyAbove: null,
-      isPartiallyBelow: null,
-      rect: null
+      isPartiallyBelow: null
     }
   }
 }
