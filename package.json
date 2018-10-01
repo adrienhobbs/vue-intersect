@@ -1,16 +1,20 @@
 {
   "name": "vue-intersect",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy-page": "gh-pages -d dist",
+    "build-deploy": "yarn build && yarn deploy-page",
+    "build-lib": "vue-cli-service build --target lib --name vue-on-visible src/lib/index.js"
   },
   "dependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.0",
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
@@ -35,9 +39,30 @@
       "autoprefixer": {}
     }
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "description": "Intersection Observer for Vue JS",
+  "main": "dist/vue-intersect.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrienhobbs/vue-intersect.git"
+  },
+  "keywords": [
+    "scroll",
+    "intersection-observer",
+    "vue",
+    "vue.js",
+    "visibility",
+    "visible"
   ]
 }
